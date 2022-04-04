@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <title>Подбор программы</title>
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -21,13 +21,13 @@
         <div class="main-navigation-wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="index.html">главная</a>
+              <a class="main-navigation__link" href="index.html">Главная</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="catalog.html">каталог продукции</a>
+              <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-navigation__item main-navigation__item--current">
-              <a class="main-navigation__link" href="form.html">подбор программы</a>
+              <a class="main-navigation__link" href="#">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -40,13 +40,13 @@
           <p class="questionnaire__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </header>
         <h2 class="visually-hidden">Анкета</h2>
-        <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__cat-data">
             <legend class="visually-hidden">Данные кота</legend>
             <ul class="form__cat-data-list form__cat-data-list--text">
               <li class="form__cat-data-item form__cat-data-item--text">
                 <label class="form__label form__label--cat-data">
-                  <span class="form__cat-data-text">ИМЯ:*</span>
+                  <span class="form__cat-data-text">Имя:*</span>
                   <input class="form__text-input" type="text" name="cat-name" placeholder="барсик" required>
                 </label>
               </li>
@@ -68,7 +68,7 @@
                 <label class="form__label form__label--cat-data">
                   <input class="form__radio-input" type="radio" name="goal" value="lose" checked>
                   <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__cat-data-text">похудение</span>
+                  <span class="form__cat-data-text">Похудение</span>
                 </label>
               </li>
               <li class="form__cat-data-item form__cat-data-item--radio">
@@ -106,7 +106,7 @@
           </fieldset>
           <fieldset class="form__comment">
             <legend class="form__legend">Комментарий</legend>
-            <textarea class="form__textarea" name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form__additional">
             <legend class="form__legend">Дополнительно</legend>
@@ -115,33 +115,33 @@
                 <label class="form__label form__label--additional">
                   <input class="form__checkbox-input" type="checkbox" name="sweetener" checked>
                   <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__additional-text">сахарозаменитель</span>
+                  <span class="form__additional-text">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__additional-item">
                 <label class="form__label form__label--additional">
                   <input class="form__checkbox-input" type="checkbox" name="water">
                   <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__additional-text">питьевая вода</span>
+                  <span class="form__additional-text">Питьевая вода</span>
                 </label>
               </li>
               <li class="form__additional-item">
                 <label class="form__label form__label--additional">
                   <input class="form__checkbox-input" type="checkbox" name="milk">
                   <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__additional-text">молоко</span>
+                  <span class="form__additional-text">Молоко</span>
                 </label>
               </li>
               <li class="form__additional-item">
                 <label class="form__label form__label--additional">
                   <input class="form__checkbox-input" type="checkbox" name="vitamins">
                   <span class="form__control-mark form__control-mark--checkbox"></span>
-                  <span class="form__additional-text">витамины</span>
+                  <span class="form__additional-text">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="button form__submit" type="submit">отправить заявку</button>
+          <button class="button form__submit" type="submit">Отправить заявку</button>
           <p class="form__text">* — Обязательные поля</p>
         </form>
       </section>
@@ -149,7 +149,7 @@
     <section class="cooperation">
       <div class="cooperation__wrapper">
         <div class="cooperation__contain">
-          <h2 class="cooperation__title">приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="cooperation__contacts">
             ул. Большая<br>
             Конюшенная, д. 19/8<br>
