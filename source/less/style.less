@@ -1,1 +1,61 @@
-// Начните писать стили здесь
+@import url("./blocks/main-header.less");
+@import url("./blocks/main-navigation.less");
+@import url("./blocks/main-footer.less");
+@import url("./blocks/main-footer__social.less");
+@import url("./blocks/main-footer__copyright.less");
+@import url("./blocks/cooperation.less");
+@import url("./blocks/main-container.less");
+@import url("./blocks/promo.less");
+@import url("./blocks/target-selection.less");
+@import url("./blocks/button.less");
+@import url("./blocks/features.less");
+@import url("./blocks/example.less");
+@import url("./blocks/catalog.less");
+@import url("./blocks/form-container.less");
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
+  font-display: swap;
+}
+
+@Oswald: "Oswald", sans-serif;
+@Arial: "Arial", "Helvetica", sans-serif;
+
+body {
+  width: 320px;
+  margin: 0 auto;
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
