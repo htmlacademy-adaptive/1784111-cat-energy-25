@@ -1,5 +1,13 @@
 .features {
-  padding: 20px 20px 50px;
+  padding: 20px 20px 49px;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 71px 110px 26px 110px;
+  }
 }
 
 .features__title {
@@ -13,18 +21,48 @@
 }
 
 .features__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    min-height: 597px;
+    margin-right: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 280px;
+    margin-right: 0;
+  }
 }
 
 .features__item {
+  min-height: 60px;
   font-family: @Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    width: 249px;
+    height: 280px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
 
   &--1 {
     background: url("../../img/features-1-img.svg") no-repeat;

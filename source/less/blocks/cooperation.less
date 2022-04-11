@@ -1,8 +1,27 @@
+.cooperation__wrapper {
+  position: relative;
+}
+
 .cooperation__contain {
   display: flex;
+  justify-content: space-between;
   padding: 26px 20px;
   line-height: 20px;
   background-color: @basic-gray;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    z-index: 1;
+    width: 565px;
+    padding: 56px 80px;
+  }
 
   &--index {
     background-color: @white;
@@ -10,15 +29,70 @@
 }
 
 .cooperation__title {
+  width: 139px;
   font-family: @Oswald;
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
   color: @dark-grey-3;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 172px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 163px;
+  }
 }
 
 .cooperation__contacts {
+  width: 139px;
   font-family: @Arial;
   font-size: 14px;
   color: @dark-grey-1;
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 165px;
+  }
+}
+
+.cooperation__map-contain {
+  position: relative;
+}
+
+.cooperation__map {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    height: 400px;
+  }
+}
+
+.cooperation__map-pin {
+  position: absolute;
+  top: 139px;
+  left: 134px;
+
+  @media (min-width: @tablet-width) {
+    top: 146px;
+    left: 333px;
+    width: 113px;
+    height: 106px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 131px;
+    left: 908px;
+  }
 }

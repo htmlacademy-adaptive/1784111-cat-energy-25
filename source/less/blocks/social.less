@@ -1,3 +1,14 @@
+.social {
+  .flex-center ();
+  min-height: 63px;
+  border-bottom: 1px solid @gray-85;
+
+  @media (min-width: @tablet-width) {
+    min-height: 22px;
+    border-bottom: none;
+  }
+}
+
 .social__list {
   display: flex;
   flex-wrap: wrap;
