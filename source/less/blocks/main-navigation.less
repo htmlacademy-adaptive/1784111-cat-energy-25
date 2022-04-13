@@ -6,8 +6,29 @@
   list-style-type: none;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    width: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 478px;
+  }
+}
+
+.main-navigation__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-navigation__link {
+  display: block;
+  padding: 22px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
