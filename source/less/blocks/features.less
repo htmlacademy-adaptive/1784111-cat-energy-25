@@ -2,7 +2,18 @@
   padding: 20px 20px 49px;
 
   @media (min-width: @tablet-width) {
+    // position: relative;
     padding: 45px 30px;
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: -30px;
+    //   right: -30px;
+    //   height: 1px;
+    //   background-color: @light-gray;
+    // }
   }
 
   @media (min-width: @desktop-width) {
@@ -11,13 +22,24 @@
 }
 
 .features__title {
+  margin: 0;
+  margin-bottom: 40px;
   font-family: @Oswald;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
@@ -44,16 +66,25 @@
 
 .features__item {
   min-height: 60px;
+  padding-left: 80px;
   font-family: @Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: @black;
+  color: @dark-grey-1;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 249px;
-    height: 280px;
+    min-height: 280px;
+    padding-left: 0;
+    padding-top: 151px;
+    font-size: 16px;
+    line-height: 24px;
+    background-position: 0 40px;
+    background-size: 80px;
   }
 
   &:not(:last-child) {
@@ -65,18 +96,78 @@
   }
 
   &--1 {
-    background: url("../../img/features-1-img.svg") no-repeat;
+    background-image: url("../../img/features-1-img.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: -1;
+        content: "1";
+        font-family: @Oswald;
+        font-size: 280px;
+        line-height: 280px;
+        color: @basic-gray;
+      }
+    }
   }
 
   &--2 {
-    background: url("../../img/features-2-img.svg") no-repeat;
+    background-image: url("../../img/features-2-img.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: -1;
+        content: "2";
+        font-family: @Oswald;
+        font-size: 280px;
+        line-height: 280px;
+        color: @basic-gray;
+      }
+    }
   }
 
   &--3 {
-    background: url("../../img/features-3-img.svg") no-repeat;
+    background-image: url("../../img/features-3-img.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: -1;
+        content: "3";
+        font-family: @Oswald;
+        font-size: 280px;
+        line-height: 280px;
+        color: @basic-gray;
+      }
+    }
   }
 
   &--4 {
-    background: url("../../img/features-4-img.svg") no-repeat;
+    background-image: url("../../img/features-4-img.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: -1;
+        content: "4";
+        font-family: @Oswald;
+        font-size: 280px;
+        line-height: 280px;
+        color: @basic-gray;
+      }
+    }
   }
 }

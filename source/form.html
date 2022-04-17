@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <div class="page__container">
+    <!-- <div class="page__container"> -->
       <header class="main-header">
-        <div class="main-header__wrapper">
+        <div class="main-header__logo-wrapper">
           <a class="main-header__logo-link" href="index.html">
             <img class="main-header__cat-energy-logo" src="img/icons/cat-energy-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи.">
           </a>
@@ -17,20 +17,20 @@
             <img class="main-header__cat-energy-text-logo" src="img/icons/header-logo.svg" width="101" height="18" alt="Кэт энерджи.">
           </a>
         </div>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-navigation-wrapper">
             <ul class="main-navigation__list">
               <li class="main-navigation__item">
-                <a class="main-navigation__link" href="index.html">Главная</a>
+                <a class="main-navigation__link main-navigation__link--form-color" href="index.html">Главная</a>
               </li>
               <li class="main-navigation__item">
-                <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
+                <a class="main-navigation__link main-navigation__link--form-color" href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="main-navigation__item main-navigation__item--current">
-                <a class="main-navigation__link" href="#">Подбор программы</a>
+              <li class="main-navigation__item main-navigation__item--current main-navigation__item--border-form-color">
+                <a class="main-navigation__link main-navigation__link--form-color" href="#">Подбор программы</a>
               </li>
             </ul>
           </div>
@@ -197,6 +197,7 @@
             </a>
           </div>
       </footer>
-    </div>
+      <script src="script.js"></script>
+    <!-- </div> -->
   </body>
 </html>

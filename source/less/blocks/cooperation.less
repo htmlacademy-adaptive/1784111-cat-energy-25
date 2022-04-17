@@ -20,6 +20,7 @@
     left: 110px;
     z-index: 1;
     width: 565px;
+    height: 198px;
     padding: 56px 80px;
   }
 
@@ -51,13 +52,24 @@
   font-family: @Arial;
   font-size: 14px;
   color: @dark-grey-1;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 160px;
+    text-align: right;
   }
 
   @media (min-width: @desktop-width) {
     width: 165px;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.cooperation__decorative--margin {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-bottom: 20px;
   }
 }
 
@@ -67,6 +79,9 @@
 
 .cooperation__map {
   display: block;
+  width: 320px;
+  height: 362px;
+  border: none;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -79,20 +94,20 @@
   }
 }
 
-.cooperation__map-pin {
-  position: absolute;
-  top: 139px;
-  left: 134px;
+// .cooperation__map-pin {
+//   position: absolute;
+//   top: 139px;
+//   left: 134px;
 
-  @media (min-width: @tablet-width) {
-    top: 146px;
-    left: 333px;
-    width: 113px;
-    height: 106px;
-  }
+//   @media (min-width: @tablet-width) {
+//     top: 146px;
+//     left: 333px;
+//     width: 113px;
+//     height: 106px;
+//   }
 
-  @media (min-width: @desktop-width) {
-    top: 131px;
-    left: 908px;
-  }
-}
+//   @media (min-width: @desktop-width) {
+//     top: 131px;
+//     left: 908px;
+//   }
+// }

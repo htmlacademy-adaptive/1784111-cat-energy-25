@@ -3,32 +3,50 @@
   flex-direction: column;
   min-height: 65px;
   padding: @mobile-padding;
+  padding-top: 10px;
   font-family: @Oswald;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     padding: @tablet-padding;
+    padding-top: 24px;
+    padding-bottom: 10px;
     min-height: 75px;
   }
 
   @media (min-width: @desktop-width) {
     padding: @desktop-padding;
-    min-height: 140px;
+    padding-top: 53px;
+    padding-bottom: 20px;
+    min-height: 113px;
   }
 }
 
 .main-header__logo-wrapper {
-  min-height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 191px;
+  height: 38px;
+  margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
-    min-height: 52px;
+    width: 174px;
+    height: 52px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 59px;
+    width: 202px;
+    height: 59px;
   }
+}
+
+.main-header__cat-energy-logo {
+  width: 34px;
+  height: 38px;
 }
