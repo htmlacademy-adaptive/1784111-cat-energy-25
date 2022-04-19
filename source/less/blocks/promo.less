@@ -1,5 +1,4 @@
 .promo {
-  padding: @mobile-padding;
   box-sizing: border-box;
   font-family: @Oswald;
   font-weight: 400;
@@ -9,7 +8,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 267px 270px;
+    padding: 0 0 267px 190px;
   }
 }
 
@@ -17,19 +16,27 @@
   position: relative;
   padding-bottom: 164px;
   margin-bottom: 138px;
-  background:
-    url("../../img/green-background.png"),
-    url("../../img/index-background-cat.png") no-repeat;
-  background-color: @black;
+  background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat.png");
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
     margin-bottom: 49px;
-    background: none;
+    background-image: none;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 52px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -170px;
+      right: 0;
+      width: 720px;
+      height: 694px;
+      z-index: -1;
+      background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop.png");
+    }
   }
 
   &::after {
@@ -39,10 +46,20 @@
     left: 20px;
     width: 280px;
     height: 270px;
-    background-image: url("../../img/index-product-background.png");
+    background-image: url("../img/index-product-background.png");
 
     @media (min-width: @tablet-width) {
-      background: none;
+      top: 180px;
+      left: 0;
+      width: 709px;
+      height: 609px;
+      background-image: url("../img/index-product-background.png");
+      background-size: contain;
+      z-index: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
     }
   }
 }
@@ -77,5 +94,28 @@
   @media (min-width: @tablet-width) {
     color: @black;
     text-align: left;
+  }
+}
+
+.promo .promo__button {
+  width: 280px;
+  margin-left: 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    margin: 0;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    background-color: @limeade;
+  }
+
+  &:focus {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
