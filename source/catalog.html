@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="img/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo-link" href="index.html">
-          <img class="main-header__cat-energy-logo" src="img/icons/cat-energy-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи.">
-        </a>
-        <a class="main-header__text-logo-link" href="index.html">
-          <img class="main-header__cat-energy-text-logo" src="img/icons/header-logo.svg" width="101" height="18" alt="Кэт энерджи.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/icons/cat-energy-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/cat-energy-logo-tablet.svg">
+            <img class="main-header__cat-energy-logo" src="img/icons/cat-energy-logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи.">
+          </picture>
         </a>
       </div>
       <nav class="main-navigation main-navigation--opened main-navigation--nojs">
@@ -42,7 +47,10 @@
         <ul class="catalog__product-list">
           <li class="catalog__product-card">
             <a class="catalog__product-more-image-link" href="#">
-              <img class="catalog__product-image" src="img/product-pro-500-chicken.png" width="68" height="86" alt="">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/product-pro-500-chicken-big.png 1x, img/product-pro-500-chicken-big@2x.png 2x" width="161" height="172">
+                <img class="catalog__product-image" src="img/product-pro-500-chicken.png" srcset="img/product-pro-500-chicken.png 1x, img/product-pro-500-chicken@2x.png 2x" width="68" height="86" alt="">
+              </picture>
             </a>
             <a class="catalog__product-more-title-link" href="#">
               <h3 class="catalog__product-title">Cat Energy PRO 500 г</h3>
@@ -59,7 +67,10 @@
           </li>
           <li class="catalog__product-card">
             <a class="catalog__product-more-image-link" href="#">
-              <img class="catalog__product-image" src="img/product-pro-1000-chicken.png" width="84" height="100" alt="">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/product-pro-1000-chicken-big.png 1x, img/product-pro-1000-chicken-big@2x.png 2x" width="168" height="206">
+                <img class="catalog__product-image" src="img/product-pro-500-chicken.png" srcset="img/product-pro-1000-chicken.png 1x, img/product-pro-1000-chicken@2x.png 2x" width="84" height="100" alt="">
+              </picture>
             </a>
             <a class="catalog__product-more-title-link" href="#">
               <h3 class="catalog__product-title">Cat Energy PRO 1000 г</h3>
@@ -76,7 +87,10 @@
           </li>
           <li class="catalog__product-card">
             <a class="catalog__product-more-image-link" href="#">
-              <img class="catalog__product-image" src="img/product-pro-500-fish.png" width="68" height="78" alt="">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/product-pro-500-fish-big.png 1x, img/product-pro-500-fish-big@2x.png 2x" width="163" height="174">
+                <img class="catalog__product-image" src="img/product-pro-500-fish.png" srcset="img/product-pro-500-fish.png 1x, img/product-pro-500-fish@2x.png 2x" width="68" height="78" alt="">
+              </picture>
             </a>
             <a class="catalog__product-more-title-link" href="#">
               <h3 class="catalog__product-title">Cat Energy PRO 500 г</h3>
@@ -93,7 +107,10 @@
           </li>
           <li class="catalog__product-card">
             <a class="catalog__product-more-image-link" href="#">
-              <img class="catalog__product-image" src="img/product-pro-1000-fish.png" width="84" height="100" alt="">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/product-pro-1000-fish-big.png 1x, img/product-pro-1000-fish-big@2x.png 2x" width="168" height="200">
+                <img class="catalog__product-image" src="img/product-pro-1000-fish.png" srcset="img/product-pro-1000-fish.png 1x, img/product-pro-1000-fish@2x.png 2x" width="84" height="100" alt="">
+              </picture>
             </a>
             <a class="catalog__product-more-title-link" href="#">
               <h3 class="catalog__product-title">Cat Energy PRO 1000 г</h3>
@@ -110,7 +127,10 @@
           </li>
           <li class="catalog__product-card">
             <a class="catalog__product-more-image-link" href="#">
-              <img class="catalog__product-image" src="img/product-slim-500-buckwheat.png" width="68" height="78" alt="">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/product-slim-500-buckwheat-big.png 1x, img/product-slim-500-buckwheat-big@2x.png 2x" width="161" height="171">
+                <img class="catalog__product-image" src="img/product-slim-500-buckwheat.png" srcset="img/product-slim-500-buckwheat.png 1x, img/product-slim-500-buckwheat@2x.png 2x" width="68" height="78" alt="">
+              </picture>
             </a>
             <a class="catalog__product-more-title-link" href="#">
               <h3 class="catalog__product-title">Cat Energy slim 500 г</h3>
@@ -127,7 +147,10 @@
           </li>
           <li class="catalog__product-card">
             <a class="catalog__product-more-image-link" href="#">
-              <img class="catalog__product-image" src="img/product-slim-1000-buckwheat.png" width="84" height="100" alt="">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/product-slim-1000-buckwheat-big.png 1x, img/product-slim-1000-buckwheat-big@2x.png 2x" width="168" height="200">
+                <img class="catalog__product-image" src="img/product-slim-1000-buckwheat.png" srcset="img/product-slim-1000-buckwheat.png 1x, img/product-slim-1000-buckwheat@2x.png 2x" width="84" height="100" alt="">
+              </picture>
             </a>
             <a class="catalog__product-more-title-link" href="#">
               <h3 class="catalog__product-title">Cat Energy slim 1000 г</h3>
@@ -144,7 +167,10 @@
           </li>
           <li class="catalog__product-card">
             <a class="catalog__product-more-image-link" href="#">
-              <img class="catalog__product-image" src="img/product-slim-500-rice.png" width="72" height="84" alt="">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/product-slim-500-rice-big.png 1x, img/product-slim-500-rice-big@2x.png 2x" width="163" height="174">
+                <img class="catalog__product-image" src="img/product-slim-500-rice.png" srcset="img/product-slim-500-rice.png 1x, img/product-slim-500-rice@2x.png 2x" width="72" height="84" alt="">
+              </picture>
             </a>
             <a class="catalog__product-more-title-link" href="#">
               <h3 class="catalog__product-title">Cat Energy slim 500 г</h3>
