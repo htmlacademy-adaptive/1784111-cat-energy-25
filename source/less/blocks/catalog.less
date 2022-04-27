@@ -509,14 +509,29 @@
   background-repeat: no-repeat;
   background-position: 101px 58px, 0 0, 0 0;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/gift.svg"),
+      linear-gradient(@transperancy-green, @transperancy-green),
+      url("../img/catalog-background-cat@2x.png");
+    background-size: auto, auto, 279px 289px;
+  }
+
   @media (min-width: @tablet-width) {
     height: 200px;
     background-image:
       url("../img/gift.svg"),
       linear-gradient(@transperancy-green, @transperancy-green),
-      url("../img/catalog-background-cat-big.png");
+      url("../img/catalog-background-cat-tablet.png");
     background-size: 80px 82px, 100%, 707px 200px;
     background-position: 101px 58px, 0 0, 0 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/gift.svg"),
+        linear-gradient(@transperancy-green, @transperancy-green),
+        url("../img/catalog-background-cat-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -527,6 +542,13 @@
       url("../img/catalog-background-cat.png");
     background-size: 80px 82px, 100%, 245px 289px;
     background-position: 83px 55px, 0 0, 0 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/gift.svg"),
+        linear-gradient(@transperancy-green, @transperancy-green),
+        url("../img/catalog-background-cat@2x.png");
+    }
   }
 }
 

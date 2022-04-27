@@ -18,6 +18,11 @@
   margin-bottom: 138px;
   background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat.png");
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat@2x.png");
+    background-size: 320px 302px;
+  }
+
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
     margin-bottom: 49px;
@@ -36,6 +41,11 @@
       height: 694px;
       z-index: -1;
       background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop@2x.png");
+        background-size: 720px 694px;
+      }
     }
   }
 
@@ -46,16 +56,26 @@
     left: 20px;
     width: 280px;
     height: 270px;
-    background-image: url("../img/index-product-background.png");
+    background-image: url("../img/index-product-mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-product-mobile@2x.png");
+      background-size: 280px 270px;
+    }
 
     @media (min-width: @tablet-width) {
       top: 180px;
       left: 0;
       width: 709px;
       height: 609px;
-      background-image: url("../img/index-product-background.png");
-      background-size: contain;
+      background-image: url("../img/index-product-tablet.png");
+      background-position: -90px 0;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-product-tablet@2x.png");
+        background-size: 709px 609px;
+      }
     }
 
     @media (min-width: @desktop-width) {

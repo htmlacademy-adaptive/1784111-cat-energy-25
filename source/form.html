@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Подбор программы</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="img/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo-link" href="index.html">
-          <img class="main-header__cat-energy-logo" src="img/icons/cat-energy-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи.">
-        </a>
-        <a class="main-header__text-logo-link" href="index.html">
-          <img class="main-header__cat-energy-text-logo" src="img/icons/header-logo.svg" width="101" height="18" alt="Кэт энерджи.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/icons/cat-energy-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/cat-energy-logo-tablet.svg">
+            <img class="main-header__cat-energy-logo" src="img/icons/cat-energy-logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи.">
+          </picture>
         </a>
       </div>
       <nav class="main-navigation main-navigation--opened main-navigation--nojs">

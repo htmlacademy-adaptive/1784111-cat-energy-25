@@ -28,9 +28,6 @@
 }
 
 .main-header__logo-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 191px;
   height: 38px;
   margin-bottom: 17px;
@@ -47,6 +44,24 @@
 }
 
 .main-header__cat-energy-logo {
-  width: 34px;
-  height: 38px;
+  min-width: 191px;
+  min-height: 38px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 174px;
+    min-height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 202px;
+    min-height: 59px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
