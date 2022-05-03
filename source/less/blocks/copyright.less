@@ -17,10 +17,24 @@
     width: 163px;
     min-height: 34px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link:hover .copyright__icon {
+  fill: @basic-green;
 }
 
 .copyright__text {
   font-size: 16px;
   line-height: 18px;
   color: @dark-grey-1;
+}
+
+.copyright__icon {
+  min-width: 27px;
+  min-height: 34px;
+  fill: @special-grey-2;
 }

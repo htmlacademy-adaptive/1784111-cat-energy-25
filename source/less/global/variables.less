@@ -30,6 +30,7 @@
 @input-border: #e7e7e7;
 @gray-73: #bababa;
 @error-color: #ff8282;
+@special-grey-2: #666666;
 
 .flex-center () {
   display: flex;
@@ -42,3 +43,34 @@
   margin-right: 0;
   border: 0;
 }
+
+.contain-center (@_width) {
+  width: @_width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-size (@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+// .decorative-line () {
+//   position: relative;
+
+//   &::before {
+//     position: absolute;
+//     top: 50%;
+//     left: -2.08vw;
+//     right: 0;
+//     height: 2px;
+//     background-color: @basic-green;
+//     content: "";
+//     z-index: -1;
+
+//     // @media (min-width: @desktop-width) {
+//     //   left: calc(-50vw + 610px);
+//     //   right: calc(-50vw + 626px);
+//     // }
+//   }
+// }
