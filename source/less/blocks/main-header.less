@@ -1,28 +1,53 @@
 .main-header {
-  display: flex;
-  flex-direction: column;
-  min-height: 65px;
-  padding: @mobile-padding;
-  padding-top: 10px;
   font-family: @Oswald;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+
+  &--index {
+    position: relative;
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 50%;
+        height: 694px;
+        z-index: -1;
+        background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop.png");
+        background-size: cover, 100% 694px;
+
+        @media (min-resolution: 2dppx) {
+          background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop@2x.png");
+          background-size: 100% 694px;
+        }
+      }
+    }
+  }
+}
+
+.main-header__contain {
+  .contain-center (280px);
+  display: flex;
+  flex-direction: column;
+  min-height: 65px;
+  padding-top: 10px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    .contain-center (708px);
     flex-direction: row;
     justify-content: space-between;
-    padding: @tablet-padding;
     padding-top: 24px;
     padding-bottom: 10px;
     min-height: 75px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: @desktop-padding;
+    .contain-center (1220px);
     padding-top: 53px;
-    padding-bottom: 20px;
+    padding-bottom: 22px;
     min-height: 113px;
   }
 }
@@ -35,6 +60,7 @@
   @media (min-width: @tablet-width) {
     width: 174px;
     height: 52px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {

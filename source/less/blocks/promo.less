@@ -1,85 +1,68 @@
 .promo {
-  box-sizing: border-box;
   font-family: @Oswald;
   font-weight: 400;
 
+  background-image: url("../img/index-product-mobile.png"), linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat.png");
+  background-size: 280px 270px, 100% 302px, 320px 302px;
+  background-repeat: no-repeat;
+  background-position: center 167px, center top, center top;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-product-mobile@2x.png"), linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat@2x.png");
+    background-size: 280px 270px, 100% 302px, 320px 302px;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 0 0 596px 116px;
+    background-image: url("../img/index-product-tablet.png");
+    background-position: center 255px;
+    background-size: 709px 609px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-product-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 267px 190px;
+    background-image: none;
   }
 }
 
-.promo__wrapper {
+.promo__container {
+  .contain-center (280px);
+  padding-top: 27px;
+  box-sizing: border-box;
   position: relative;
-  padding-bottom: 164px;
-  margin-bottom: 138px;
-  background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat.png");
-
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat@2x.png");
-    background-size: 320px 302px;
-  }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 0;
-    margin-bottom: 49px;
-    background-image: none;
+    .contain-center (708px);
+    padding: 53px 0 526px 87px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 52px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -170px;
-      right: 0;
-      width: 720px;
-      height: 694px;
-      z-index: -1;
-      background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop.png");
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop@2x.png");
-        background-size: 720px 694px;
-      }
-    }
+    .contain-center (1220px);
+    padding-top: 90px;
+    padding-left: 80px;
+    padding-bottom: 185px;
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 167px;
-    left: 20px;
-    width: 280px;
-    height: 270px;
-    background-image: url("../img/index-product-mobile.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/index-product-mobile@2x.png");
-      background-size: 280px 270px;
-    }
-
-    @media (min-width: @tablet-width) {
-      top: 180px;
-      left: 0;
-      width: 709px;
-      height: 609px;
-      background-image: url("../img/index-product-tablet.png");
-      background-position: -90px 0;
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 436px;
+      width: 592px;
+      height: 499px;
+      background-image: url("../img/index-product-desktop.webp");
+      background-size: 552px 499px;
+      background-position: 14px 9px;
+      background-repeat: no-repeat;
       z-index: -1;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/index-product-tablet@2x.png");
-        background-size: 709px 609px;
+        background-image: url("../img/index-product-desktop@2x.webp");
+        background-size: 592px 499px;
       }
-    }
-
-    @media (min-width: @desktop-width) {
-      display: none;
     }
   }
 }
@@ -96,6 +79,7 @@
 
   @media (min-width: @tablet-width) {
     width: 450px;
+    margin-bottom: 42px;
     font-size: 60px;
     line-height: 60px;
     color: @black;
@@ -105,6 +89,7 @@
 
 .promo__slogan {
   margin: 0;
+  margin-bottom: 302px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -112,23 +97,35 @@
   color: @white;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
     color: @black;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
   }
 }
 
 .promo .promo__button {
   width: 280px;
-  margin-left: 20px;
+  min-height: 40px;
+  padding: 11px 0;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 244px;
     margin: 0;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    margin-left: 2px;
+    padding: 17px 0;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 
   &:hover {
