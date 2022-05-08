@@ -1,7 +1,7 @@
 .main-navigation {
   position: relative;
 }
-
+// Переключение мобильного меню
 @media (max-width: @mobile-width-only) {
   .main-navigation--closed .main-navigation__item {
     display: none;
@@ -10,16 +10,20 @@
   .main-navigation--opened .main-navigation-wrapper {
     position: absolute;
     top: 0;
+    left: calc((50% - 50vw) + 20px);
+    right: calc((50% - 50vw) + 1px);
+    min-width: min-content;
+    width: 100vw;
     z-index: 1;
   }
 
   .main-navigation--opened .main-navigation__toggle {
-    background-image: url("../img/icons/toggle-opened.svg");
+    background-image: url("/img/toggle-opened.svg");
     background-repeat: no-repeat;
   }
 
   .main-navigation--closed .main-navigation__toggle {
-    background-image: url("../img/icons/toggle-closed.svg");
+    background-image: url("/img/toggle-closed.svg");
     background-repeat: no-repeat;
   }
 
@@ -41,15 +45,6 @@
   min-width: 320px;
   margin-left: -20px;
   margin-right: -20px;
-
-  @media (min-width: @tablet-width) {
-    margin: 0;
-    // width: 440px;
-  }
-
-  @media (min-width: @desktop-width) {
-    // width: 475px;
-  }
 }
 
 .main-navigation__list {
@@ -68,11 +63,7 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 35px;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
     width: 440px;
-    // min-height: 36px;
     font-size: 18px;
     line-height: 24px;
   }

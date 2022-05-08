@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="img/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -16,12 +16,13 @@
         <div class="main-header__logo-wrapper">
           <a class="main-header__logo-link" href="index.html">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/icons/cat-energy-logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/icons/cat-energy-logo-tablet.svg">
-              <img class="main-header__cat-energy-logo" src="img/icons/cat-energy-logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи.">
+              <source media="(min-width: 1440px)" srcset="img/cat-energy-logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/cat-energy-logo-tablet.svg">
+              <img class="main-header__cat-energy-logo" src="img/cat-energy-logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи.">
             </picture>
           </a>
         </div>
+        <!-- main-navigation--opened и main-navigation--closed в сочетании с main-navigation-wrapper переключают состояние мобильного меню. main-navigation--nojs нужен для работоспособности меню без js -->
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть, закрыть меню</span>
@@ -200,7 +201,9 @@
             </li>
           </ul>
           <div class="catalog__additional-product">
-          <h2 class="catalog__additional-product-title">Дополнительные товары</h2>
+            <div class="catalog__line-contain catalog__line-contain--additional-product">
+              <h2 class="catalog__additional-product-title">Дополнительные товары</h2>
+            </div>
             <ul class="catalog__additional-product-list">
               <li class="catalog__additional-product-list-item">
                 <h3 class="catalog__additional-product-item-title">Сахарозаменитель</h3>
@@ -255,27 +258,27 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__text-logo-link" href="#">
-          <img class="main-footer__cat-energy-text-logo" src="img/icons/footer-logo.svg" width="128" height="24" alt="Кэт энерджи.">
+          <img class="main-footer__cat-energy-text-logo" src="img/footer-logo.svg" width="128" height="24" alt="Кэт энерджи.">
         </a>
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="#" >
-                <svg class="social__icon" width="28" height="22" aria-label="vk.">
+                <svg class="social__icon" width="28" height="22" aria-label="vk." role="img">
                   <use xlink:href="img/sprite.svg#vkontakte-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube" href="#">
-                <svg class="social__icon" width="28" height="22" aria-label="youtube.">
+                <svg class="social__icon" width="28" height="22" aria-label="youtube." role="img">
                   <use xlink:href="img/sprite.svg#youtube-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--telegram" href="#">
-                <svg class="social__icon" width="28" height="22" aria-label="telegram.">
+                <svg class="social__icon" width="28" height="22" aria-label="telegram." role="img">
                   <use xlink:href="img/sprite.svg#telegram-icon"></use>
                 </svg>
               </a>
@@ -285,13 +288,13 @@
           <div class="main-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="copyright__text">HTML Academy</span>
-              <svg class="copyright__icon" width="28" height="34" aria-label="Логотип htmlacademу.">
+              <svg class="copyright__icon" width="28" height="34" aria-label="Логотип htmlacademу." role="img">
                 <use xlink:href="img/sprite.svg#html-academy-logo"></use>
               </svg>
             </a>
           </div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
