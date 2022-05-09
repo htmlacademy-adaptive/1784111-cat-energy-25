@@ -11,7 +11,7 @@
   .contain-center (280px);
   display: flex;
   justify-content: space-between;
-  padding: 28px 0;
+  padding: 26px 0;
   line-height: 20px;
   box-sizing: border-box;
 
@@ -24,7 +24,7 @@
     .contain-center (1220px);
     position: absolute;
     top: 95px;
-    left: 150px;
+    left: 110px;
     z-index: 1;
     width: 565px;
     min-height: 198px;
@@ -35,7 +35,6 @@
 
   &--index {
     background-color: @white;
-    left: 110px;
   }
 
   &--form {
@@ -46,14 +45,12 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: 136px;
       padding: 59px 70px 59px 80px;
     }
   }
 
   &--catalog {
     @media (min-width: @desktop-width) {
-      left: 111px;
       padding: 59px 70px 59px 80px;
     }
   }
@@ -108,6 +105,23 @@
   @media (min-width: @tablet-width) {
     display: block;
     margin-bottom: 20px;
+  }
+}
+
+.cooperation__map-contain {
+  position: relative;
+  min-height: 362px;
+  background-image: url("../img/location-map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 400px;
+    background-image: url("../img/location-map-tablet.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/location-map-desktop.png");
   }
 }
 

@@ -63,6 +63,7 @@
 
 .questionnaire__legend {
   padding: 0;
+  font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: @black;
@@ -165,10 +166,6 @@
   }
 }
 
-// .questionnaire__cat-data-item {
-//  min-height: 30px;
-// }
-
 .questionnaire__label {
   &--cat-data {
     display: flex;
@@ -261,6 +258,10 @@
   opacity: 0.3;
 }
 
+.questionnaire__radio-input:focus + .questionnaire__control-mark {
+  outline: 1px solid @black;
+}
+
 .questionnaire__radio-input:checked + .questionnaire__control-mark--radio {
   background-image: url("../img/radio-button.svg");
   background-repeat: no-repeat;
@@ -279,6 +280,10 @@
   @media (min-width: @tablet-width) {
     background-size: 24px 18px;
   }
+}
+
+.questionnaire__checkbox-input:focus + .questionnaire__control-mark {
+  outline: 1px solid @black;
 }
 
 .questionnaire__cat-data-text {
@@ -320,20 +325,14 @@
     outline: 2px solid @dark-grey-1;
   }
 
+  &:invalid {
+    outline: 2px solid @error-color;
+  }
 
   &::placeholder {
     color: @dark-grey-1;
   }
 }
-
-// Ошибка ввода
-// error {
-//   outline: 2px solid @error-color;
-// }
-
-// .questionnaire__radio-input {
-
-// }
 
 .questionnaire__owner-data {
   padding: 0;
@@ -349,52 +348,49 @@
   }
 }
 
+.questionnaire__line-contain {
+  &--owner-data {
+    .decorative-line (30%);
+    margin-bottom: 35px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 76px;
+    }
+  }
+
+  &--comment {
+    .decorative-line ();
+    margin-bottom: 37px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 76px;
+    }
+  }
+
+  &--additional {
+    .decorative-line ();
+    margin-bottom: 34px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 57px;
+    }
+  }
+}
+
 .questionnaire__owner-legend {
-  position: relative;
-  width: 187px;
-  margin-bottom: 35px;
+  max-width: 187px;
+  width: fit-content;
+  display: inline-block;
+  background-color: @white;
+  padding-right: 14px;
+
 
   @media (min-width: @tablet-width) {
-    width: auto;
-    margin-bottom: 76px;
-  }
-
-  &::before {
-    @media (min-width: @tablet-width) {
-      position: absolute;
-      top: 50%;
-      left: -71px;
-      width: 30px;
-      height: 2px;
-      background-color: @basic-green;
-      content: "";
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 70px;
-      left: -109px;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    top: 50%;
-    right: -114px;
-    width: 99px;
-    height: 2px;
-    background-color: @basic-green;
-    content: "";
-
-    @media (min-width: @tablet-width) {
-      width: 145px;
-      top: 20px;
-      right: -185px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 778px;
-      right: -816px;
-    }
+    max-width: none;
+    width: fit-content;
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -469,6 +465,11 @@
     background-image: url("../img/email-focus.svg");
   }
 
+  &:invalid {
+    outline: 2px solid @error-color;
+    background-image: url("../img/email-error.svg");
+  }
+
   &::placeholder {
     color: @dark-grey-1;
   }
@@ -510,6 +511,11 @@
     background-image: url("../img/phone-focus.svg");
   }
 
+  &:invalid {
+    outline: 2px solid @error-color;
+    background-image: url("../img/phone-error.svg");
+  }
+
   &::placeholder {
     color: @dark-grey-1;
   }
@@ -545,88 +551,16 @@
   }
 }
 
-// .decorative-line {
-//   position: relative;
-
-//   &::after {
-//     position: absolute;
-//     top: 50%;
-//     right: 100%;
-//     width: 100vw;
-//     height: 2px;
-//     background-color: @basic-green;
-//     content: "";
-//     z-index: -1;
-//   }
-
-//   &::before {
-//     position: absolute;
-//     top: 50%;
-//     width: 100vw;
-//     height: 2px;
-//     background-color: @basic-green;
-//     content: "";
-//     z-index: -1;
-//   }
-// }
-
 .questionnaire__comment-legend {
-  position: relative;
-  margin-bottom: 37px;
-  // padding: 20px;
-  // margin-left: -20px;
-  // background-color: @white;
-  // .decorative-line ();
+  width: fit-content;
+  padding-right: 22px;
+  background-color: @white;
+
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
-  }
-
-  @media (min-width: @desktop-width) {
-    // margin-left: -40px;
-    // padding-left: 40px;
-  }
-
-  &::before {
-    @media (min-width: @tablet-width) {
-      position: absolute;
-      top: 50%;
-      left: -69px;
-      width: 30px;
-      height: 2px;
-      background-color: @basic-green;
-      content: "";
-    }
-
-    @media (min-width: @desktop-width) {
-      left: -110px;
-      width: 70px;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    top: 50%;
-    right: -180px;
-    width: 158px;
-    height: 2px;
-    background-color: @basic-green;
-    content: "";
-
-    @media (min-width: @tablet-width) {
-      position: absolute;
-      top: 20px;
-      right: -518px;
-      width: 478px;
-      height: 2px;
-      background-color: @basic-green;
-      content: "";
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 1108px;
-      right: -1150px;
-    }
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -661,6 +595,10 @@
     min-height: 172px;
   }
 
+  &:focus {
+    outline: 1px solid @black;
+  }
+
   &::placeholder {
     color: @dark-grey-1;
   }
@@ -681,49 +619,14 @@
 }
 
 .questionnaire__additional-legend {
-  position: relative;
-  margin-bottom: 32px;
+  width: fit-content;
+  background-color: @white;
+  padding-right: 23px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
-  }
-
-  &::before {
-    @media (min-width: @tablet-width) {
-      position: absolute;
-      top: 20px;
-      left: -71px;
-      width: 30px;
-      height: 2px;
-      background-color: @basic-green;
-      content: "";
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 70px;
-      left: -109px;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    top: 50%;
-    right: -160px;
-    width: 136px;
-    height: 2px;
-    background-color: @basic-green;
-    content: "";
-
-    @media (min-width: @tablet-width) {
-      width: 446px;
-      top: 20px;
-      right: -487px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 1078px;
-      right: -1119px;
-    }
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
