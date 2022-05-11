@@ -1,6 +1,3 @@
-.main-navigation {
-  position: relative;
-}
 // Переключение мобильного меню
 @media (max-width: @mobile-width-only) {
   .main-navigation--closed .main-navigation__item {
@@ -9,11 +6,8 @@
 
   .main-navigation--opened .main-navigation-wrapper {
     position: absolute;
-    top: 0;
-    left: calc((50% - 50vw) + 20px);
-    right: calc((50% - 50vw) + 1px);
-    min-width: min-content;
-    width: 100vw;
+    left: 0;
+    right: 0;
     z-index: 1;
   }
 
@@ -39,12 +33,6 @@
   .main-navigation--nojs .main-navigation__item {
     display: block;
   }
-}
-
-.main-navigation-wrapper {
-  min-width: 320px;
-  margin-left: -20px;
-  margin-right: -20px;
 }
 
 .main-navigation__list {
@@ -79,9 +67,6 @@
 }
 
 .main-navigation__toggle {
-  position: absolute;
-  top: -44px;
-  right: 0;
   width: 24px;
   height: 20px;
   display: block;
@@ -89,6 +74,12 @@
   background-color: @white;
   border: none;
   cursor: pointer;
+
+  &--header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;

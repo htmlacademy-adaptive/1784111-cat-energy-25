@@ -9,9 +9,11 @@
     <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header main-header--catalog">
       <div class="main-header__contain">
         <div class="main-header__logo-wrapper">
           <a class="main-header__logo-link" href="index.html">
@@ -24,7 +26,7 @@
         </div>
         <!-- main-navigation--opened и main-navigation--closed в сочетании с main-navigation-wrapper переключают состояние мобильного меню. main-navigation--nojs нужен для работоспособности меню без js -->
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
-          <button class="main-navigation__toggle" type="button">
+          <button class="main-navigation__toggle main-navigation__toggle--header" type="button">
             <span class="visually-hidden">Открыть, закрыть меню</span>
           </button>
           <div class="main-navigation-wrapper">
@@ -53,7 +55,7 @@
               <a class="catalog__product-more-image-link" href="#">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/product-pro-500-chicken-big.png 1x, img/product-pro-500-chicken-big@2x.png 2x" width="161" height="172">
-                  <img class="catalog__product-image catalog__product-image--pro-500-chicken" src="img/product-pro-500-chicken.png" srcset="img/product-pro-500-chicken.png 1x, img/product-pro-500-chicken@2x.png 2x" width="68" height="86" alt="">
+                  <img class="catalog__product-image catalog__product-image--pro-500-chicken" src="img/product-pro-500-chicken.png" srcset="img/product-pro-500-chicken.webp 1x, img/product-pro-500-chicken@2x.webp 2x" width="68" height="86" alt="">
                 </picture>
               </a>
               <a class="catalog__product-more-title-link" href="#">
@@ -74,7 +76,7 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/product-pro-1000-chicken-desktop.png 1x, img/product-pro-1000-chicken-desktop@2x.png 2x" width="172" height="202">
                   <source media="(min-width: 768px)" srcset="img/product-pro-1000-chicken-big.png 1x, img/product-pro-1000-chicken-big@2x.png 2x" width="168" height="206">
-                  <img class="catalog__product-image catalog__product-image--pro-1000-chicken" src="img/product-pro-500-chicken.png" srcset="img/product-pro-1000-chicken.png 1x, img/product-pro-1000-chicken@2x.png 2x" width="84" height="100" alt="">
+                  <img class="catalog__product-image catalog__product-image--pro-1000-chicken" src="img/product-pro-500-chicken.png" srcset="img/product-pro-1000-chicken.webp 1x, img/product-pro-1000-chicken@2x.webp 2x" width="84" height="100" alt="">
                 </picture>
               </a>
               <a class="catalog__product-more-title-link" href="#">
@@ -94,7 +96,7 @@
               <a class="catalog__product-more-image-link" href="#">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/product-pro-500-fish-big.png 1x, img/product-pro-500-fish-big@2x.png 2x" width="163" height="174">
-                  <img class="catalog__product-image catalog__product-image--pro-500-fish" src="img/product-pro-500-fish.png" srcset="img/product-pro-500-fish.png 1x, img/product-pro-500-fish@2x.png 2x" width="68" height="78" alt="">
+                  <img class="catalog__product-image catalog__product-image--pro-500-fish" src="img/product-pro-500-fish.png" srcset="img/product-pro-500-fish.webp 1x, img/product-pro-500-fish@2x.webp 2x" width="68" height="78" alt="">
                 </picture>
               </a>
               <a class="catalog__product-more-title-link" href="#">
@@ -115,7 +117,7 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/product-pro-1000-fish-desktop.png 1x, img/product-pro-1000-fish-desktop@2x.png 2x" width="172" height="196">
                   <source media="(min-width: 768px)" srcset="img/product-pro-1000-fish-big.png 1x, img/product-pro-1000-fish-big@2x.png 2x" width="168" height="200">
-                  <img class="catalog__product-image catalog__product-image--pro-1000-fish" src="img/product-pro-1000-fish.png" srcset="img/product-pro-1000-fish.png 1x, img/product-pro-1000-fish@2x.png 2x" width="84" height="100" alt="">
+                  <img class="catalog__product-image catalog__product-image--pro-1000-fish" src="img/product-pro-1000-fish.png" srcset="img/product-pro-1000-fish.webp 1x, img/product-pro-1000-fish@2x.webp 2x" width="84" height="100" alt="">
                 </picture>
               </a>
               <a class="catalog__product-more-title-link" href="#">
@@ -135,7 +137,7 @@
               <a class="catalog__product-more-image-link" href="#">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/product-slim-500-buckwheat-big.png 1x, img/product-slim-500-buckwheat-big@2x.png 2x" width="161" height="171">
-                  <img class="catalog__product-image catalog__product-image--slim-500-buckwheat" src="img/product-slim-500-buckwheat.png" srcset="img/product-slim-500-buckwheat.png 1x, img/product-slim-500-buckwheat@2x.png 2x" width="68" height="78" alt="">
+                  <img class="catalog__product-image catalog__product-image--slim-500-buckwheat" src="img/product-slim-500-buckwheat.png" srcset="img/product-slim-500-buckwheat.webp 1x, img/product-slim-500-buckwheat@2x.webp 2x" width="68" height="78" alt="">
                 </picture>
               </a>
               <a class="catalog__product-more-title-link" href="#">
@@ -156,7 +158,7 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/product-pro-1000-buckweat-desktop.png 1x, img/product-pro-1000-buckweat-desktop@2x.png 2x" width="172" height="196">
                   <source media="(min-width: 768px)" srcset="img/product-slim-1000-buckwheat-big.png 1x, img/product-slim-1000-buckwheat-big@2x.png 2x" width="168" height="200">
-                  <img class="catalog__product-image catalog__product-image--slim-1000-buckwheat" src="img/product-slim-1000-buckwheat.png" srcset="img/product-slim-1000-buckwheat.png 1x, img/product-slim-1000-buckwheat@2x.png 2x" width="84" height="100" alt="">
+                  <img class="catalog__product-image catalog__product-image--slim-1000-buckwheat" src="img/product-slim-1000-buckwheat.png" srcset="img/product-slim-1000-buckwheat.webp 1x, img/product-slim-1000-buckwheat@2x.webp 2x" width="84" height="100" alt="">
                 </picture>
               </a>
               <a class="catalog__product-more-title-link" href="#">
@@ -176,7 +178,7 @@
               <a class="catalog__product-more-image-link" href="#">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/product-slim-500-rice-big.png 1x, img/product-slim-500-rice-big@2x.png 2x" width="163" height="174">
-                  <img class="catalog__product-image catalog__product-image--slim-500-rice" src="img/product-slim-500-rice.png" srcset="img/product-slim-500-rice.png 1x, img/product-slim-500-rice@2x.png 2x" width="72" height="84" alt="">
+                  <img class="catalog__product-image catalog__product-image--slim-500-rice" src="img/product-slim-500-rice.png" srcset="img/product-slim-500-rice.webp 1x, img/product-slim-500-rice@2x.webp 2x" width="72" height="84" alt="">
                 </picture>
               </a>
               <a class="catalog__product-more-title-link" href="#">
