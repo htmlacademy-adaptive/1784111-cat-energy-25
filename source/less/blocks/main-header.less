@@ -15,15 +15,23 @@
         width: 50%;
         height: 694px;
         z-index: -1;
-        background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop.png");
+        background-image: linear-gradient(@transperancy-green, @transperancy-green), url("/img/index-background-cat-desktop.png");
         background-size: cover, 100% 694px;
 
         @media (min-resolution: 2dppx) {
-          background-image: linear-gradient(@transperancy-green, @transperancy-green), url("../img/index-background-cat-desktop@2x.png");
+          background-image: linear-gradient(@transperancy-green, @transperancy-green), url("/img/index-background-cat-desktop@2x.png");
           background-size: 100% 694px;
         }
       }
     }
+  }
+
+  &--catalog {
+    position: relative;
+  }
+
+  &--form {
+    position: relative;
   }
 }
 
@@ -60,13 +68,13 @@
     width: 174px;
     height: 52px;
     margin: 0;
-    margin-right: 112px;
+    margin-right: 92px;
   }
 
   @media (min-width: @desktop-width) {
     width: 202px;
     height: 59px;
-    margin-right: 558px;
+    margin-right: 539px;
   }
 }
 

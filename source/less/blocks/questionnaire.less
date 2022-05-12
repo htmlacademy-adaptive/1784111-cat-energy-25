@@ -57,10 +57,6 @@
   }
 }
 
-// .questionnaire__form {
-
-// }
-
 .questionnaire__legend {
   padding: 0;
   font-weight: 400;
@@ -101,8 +97,6 @@
   color: @dark-grey-1;
 
   @media (min-width: @desktop-width) {
-    // grid-template-columns: repeat(2, auto);
-    // gap: 80px 0;
     width: 568px;
   }
 
@@ -263,7 +257,7 @@
 }
 
 .questionnaire__radio-input:checked + .questionnaire__control-mark--radio {
-  background-image: url("../img/radio-button.svg");
+  background-image: url("/img/radio-button.svg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -273,7 +267,7 @@
 }
 
 .questionnaire__checkbox-input:checked + .questionnaire__control-mark--checkbox {
-  background-image: url("../img/checkbox-button.svg");
+  background-image: url("/img/checkbox-button.svg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -381,8 +375,9 @@
   max-width: 187px;
   width: fit-content;
   display: inline-block;
-  background-color: @white;
+  margin: 0;
   padding-right: 14px;
+  background-color: @white;
 
 
   @media (min-width: @tablet-width) {
@@ -438,7 +433,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @dark-grey-1;
-  background-image: url("../img/email.svg");
+  background-image: url("/img/email.svg");
   background-repeat: no-repeat;
   background-position: 185px center;
   border: none;
@@ -462,12 +457,12 @@
 
   &:focus {
     outline: 2px solid @dark-grey-1;
-    background-image: url("../img/email-focus.svg");
+    background-image: url("/img/email-focus.svg");
   }
 
   &:invalid {
     outline: 2px solid @error-color;
-    background-image: url("../img/email-error.svg");
+    background-image: url("/img/email-error.svg");
   }
 
   &::placeholder {
@@ -484,7 +479,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @dark-grey-1;
-  background-image: url("../img/phone.svg");
+  background-image: url("/img/phone.svg");
   background-repeat: no-repeat;
   background-position: 171px center;
   border: none;
@@ -508,12 +503,12 @@
 
   &:focus {
     outline: 2px solid @dark-grey-1;
-    background-image: url("../img/phone-focus.svg");
+    background-image: url("/img/phone-focus.svg");
   }
 
   &:invalid {
     outline: 2px solid @error-color;
-    background-image: url("../img/phone-error.svg");
+    background-image: url("/img/phone-error.svg");
   }
 
   &::placeholder {
@@ -553,6 +548,7 @@
 
 .questionnaire__comment-legend {
   width: fit-content;
+  margin: 0;
   padding-right: 22px;
   background-color: @white;
 
@@ -620,8 +616,9 @@
 
 .questionnaire__additional-legend {
   width: fit-content;
-  background-color: @white;
+  margin: 0;
   padding-right: 23px;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     margin-left: -40px;
