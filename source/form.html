@@ -25,7 +25,7 @@
           </a>
         </div>
         <!-- main-navigation--opened и main-navigation--closed в сочетании с main-navigation-wrapper переключают состояние мобильного меню. main-navigation--nojs нужен для работоспособности меню без js -->
-        <nav class="main-navigation main-navigation--opened main-navigation--nojs">
+        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <button class="main-navigation__toggle main-navigation__toggle--header" type="button">
             <span class="visually-hidden">Открыть, закрыть меню</span>
           </button>
@@ -123,8 +123,8 @@
               <div class="questionnaire__line-contain questionnaire__line-contain--comment">
                 <h3 class="questionnaire__legend questionnaire__comment-legend">Комментарий</h3>
               </div>
-              <span class="visually-hidden">Расскажите обо всех повадках кота</span>
-              <textarea class="questionnaire__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <label for="textarea" class="visually-hidden">Расскажите обо всех повадках кота</label>
+              <textarea class="questionnaire__textarea" id="textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
             <fieldset class="questionnaire__additional">
               <div class="questionnaire__line-contain questionnaire__line-contain--additional">

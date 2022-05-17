@@ -153,7 +153,8 @@
   background-repeat: no-repeat;
   background-position: center right;
 
-  &--slim {
+  &--slim,
+  &--pro {
     padding-right: 41px;
 
     @media (min-width: @tablet-width) {
@@ -165,20 +166,17 @@
     }
   }
 
-  &--pro {
-    padding-right: 41px;
+  &:hover {
+    background-image: url("/img/arrow-long.svg");
+    padding-right: 49px;
 
     @media (min-width: @tablet-width) {
-      padding-right: 50px;
+      padding-right: 58px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-right: 53px;
+      padding-right: 63px;
     }
-  }
-
-  &:hover {
-    background-image: url("/img/arrow-long.svg");
   }
 
   &:active {
